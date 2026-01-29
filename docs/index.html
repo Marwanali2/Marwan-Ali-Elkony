@@ -605,6 +605,139 @@
             margin-bottom: 0.5rem;
         }
 
+        /* Education Section */
+        .education-card {
+            background: var(--color-surface);
+            padding: 3rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            max-width: 800px;
+            margin: 0 auto;
+            transition: all 0.3s ease;
+        }
+
+        .education-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--color-primary);
+            box-shadow: 0 20px 60px rgba(0, 229, 255, 0.2);
+        }
+
+        .education-header {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .education-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+        }
+
+        .education-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .education-meta {
+            color: var(--color-primary);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .education-date {
+            color: var(--color-text-muted);
+            font-size: 0.95rem;
+        }
+
+        .education-details {
+            margin-top: 1.5rem;
+        }
+
+        .education-grade {
+            background: rgba(0, 229, 255, 0.1);
+            color: var(--color-primary);
+            padding: 0.8rem 1.5rem;
+            border-radius: 10px;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .education-courses {
+            color: var(--color-text-muted);
+            line-height: 1.8;
+        }
+
+        /* Certificates Section */
+        .certificates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .certificate-card {
+            background: var(--color-surface);
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .certificate-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .certificate-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .certificate-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--color-primary);
+            box-shadow: 0 20px 60px rgba(0, 229, 255, 0.2);
+        }
+
+        .certificate-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .certificate-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .certificate-provider {
+            color: var(--color-accent);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
         /* Contact Section */
         .contact-grid {
             display: grid;
@@ -810,6 +943,8 @@
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#certificates">Certificates</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -958,7 +1093,7 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="https://play-lh.googleusercontent.com/y51XB-PXiGQ8KRXzVGb1lUNLGzqmvLgqW4ZPdHqMhAr2EzFGBxFSy-zd11-F1-VlcQ=w240-h480-rw" alt="Blue Bird Rider" style="object-fit: contain; background: #fff;">
+                        <img src="https://play-lh.googleusercontent.com/p9S09FkpNXN2ryKdTXVS899nES1fSWATeqwYUFTV3Es9unFohfWfKsRu08nqeyzNl62culkqeSlbsFao-tboTb0=w480-h960-rw" alt="Blue Bird Rider" style="object-fit: contain; background: #fff;">
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">Blue Bird - Ride Hailing Platform</h3>
@@ -974,10 +1109,10 @@
                             <span class="tech-badge">Paymob</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://play.google.com/store/apps/details?id=com.brmja.bluebird_rider_app" class="project-link" target="_blank">
+                            <a href="https://play.google.com/store/apps/details?id=tech.brmja.bluebirdClient" class="project-link" target="_blank">
                                 Play Store →
                             </a>
-                            <a href="https://apps.apple.com/eg/app/blue-bird-rider/id6737733029" class="project-link" target="_blank">
+                            <a href="https://apps.apple.com/eg/app/blue-bird-%D8%A8%D9%84%D9%88-%D8%A8%D9%8A%D8%B1%D8%AF/id6753672241" class="project-link" target="_blank">
                                 App Store →
                             </a>
                         </div>
@@ -986,7 +1121,7 @@
 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="https://play-lh.googleusercontent.com/1v02kM_8xJWKf_v_qZWz8hxhQ1yKjhWJjwP2-vTJ6OqMpxG8C9uOL7q9_-j3J0rHSg=w240-h480-rw" alt="3almny" style="object-fit: contain; background: #fff;">
+                        <img src="https://play-lh.googleusercontent.com/AJLAyuHPpWKlcAhgnzJxrlhSgJ65qW4G_xbX9BQfk6hHLDx9vLXhdsttvEZQFWzQhfrVnUuz01JuMFe1EtfFFXU=w480-h960-rw" alt="3almny" style="object-fit: contain; background: #fff;">
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">3ALMNY - E-Learning Platform</h3>
@@ -1001,10 +1136,10 @@
                             <span class="tech-badge">Clean Architecture</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://play.google.com/store/apps/details?id=com.brmja.three_almny_app" class="project-link" target="_blank">
+                            <a href="https://play.google.com/store/apps/details?id=tech.brmja.aalmny" class="project-link" target="_blank">
                                 Play Store →
                             </a>
-                            <a href="https://apps.apple.com/eg/app/3almny/id6738063988" class="project-link" target="_blank">
+                            <a href="https://apps.apple.com/eg/app/%D9%85%D9%86%D8%B5%D8%A9-%D8%B9%D9%84%D9%85%D9%86%D9%8A/id6749156990" class="project-link" target="_blank">
                                 App Store →
                             </a>
                         </div>
@@ -1013,7 +1148,7 @@
 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="https://play-lh.googleusercontent.com/9rP_CqEqP5X5E7VO4BHKnMXL3K5fzZ8DfYN0hJO6pZoKLxM8xqN2V9CjN5J7N9pZrA=w240-h480-rw" alt="Rabeh" style="object-fit: contain; background: #fff;">
+                        <img src="https://play-lh.googleusercontent.com/HBq-qls1qH4y7ruz6OGa2vULsyt9LCCA12cXcxAzzOM4VuSR0S1XT_4KurkPUnsVrg=w480-h960-rw" alt="Rabeh" style="object-fit: contain; background: #fff;">
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">Rabeh - Quiz Game</h3>
@@ -1028,7 +1163,7 @@
                             <span class="tech-badge">Bloc</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://play.google.com/store/apps/details?id=com.brmja.rabeh_app" class="project-link" target="_blank">
+                            <a href="https://play.google.com/store/apps/details?id=tech.brmja.rabeh&pcampaignid=web_share" class="project-link" target="_blank">
                                 Play Store →
                             </a>
                         </div>
@@ -1037,7 +1172,7 @@
 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="https://play-lh.googleusercontent.com/VvbNaOqxLZpLbxXLqPjLvG8qlXjQ8qXqH7xJvZqXqH7xJvZqXqH7xJvZqXqH7xJvZqXqH7xJvZqXqH7xJvZqXqH7xJvZqXqH7xJvZqXqH7xJvZqXqH7xJvZqXqH7xJvZqXqH7xJvZqXqH7xJvZqXqH7xJvZqXqH7xJvZqXqH7xJvZqXqH7xJvZqXqH7xJvZqXqH7xJvZqXqH7xJvZqXqH7xJvZqXqH7xJvZqXqH7xJvZqXqH7xJvZqXqH7xJvZqXqH7xJvZqXqH7xJvZqXqH7xJvZqXqH7xJvZqXqH7xJvZqXqH7xJvZqXqH=w240-h480-rw" alt="Meka" style="object-fit: contain; background: #fff;">
+                        <img src="https://play-lh.googleusercontent.com/gPa4nzPuDtc1mQI8G4iJilKGLWkz9zZcrOE5LvcvbPY_n5McENuYzpP5Nn30zka5ksk=w480-h960-rw" alt="Meka" style="object-fit: contain; background: #fff;">
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">Meka - Ride & Car Accessories</h3>
@@ -1052,10 +1187,10 @@
                             <span class="tech-badge">E-commerce</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://play.google.com/store/apps/details?id=com.brmja.meka_app" class="project-link" target="_blank">
+                            <a href="https://play.google.com/store/apps/details?id=tech.brmja.meka" class="project-link" target="_blank">
                                 Play Store →
                             </a>
-                            <a href="https://apps.apple.com/eg/app/meka-%D9%85%D9%8A%D9%83%D8%A7/id6738178359" class="project-link" target="_blank">
+                            <a href="https://apps.apple.com/eg/app/mekaa/id6740202238" class="project-link" target="_blank">
                                 App Store →
                             </a>
                         </div>
@@ -1064,7 +1199,7 @@
 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="https://play-lh.googleusercontent.com/Z8q9X_XqVvH3qZ8XqZ8XqZ8XqZ8XqZ8XqZ8XqZ8XqZ8XqZ8XqZ8XqZ8XqZ8XqZ8XqZ8XqZ8X=w240-h480-rw" alt="Eltagweed Elmoyasser" style="object-fit: contain; background: #fff;">
+                        <img src="https://play-lh.googleusercontent.com/HknvOs5-B_3Zaw5wLWbrNWcVrmmCAO0mlv8irHj8MBaeScGgkB23GPJJyOojvHlYhg=w480-h960-rw" alt="Eltagweed Elmoyasser" style="object-fit: contain; background: #fff;">
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">Eltagweed Elmoyasser - التجويد الميسر</h3>
@@ -1079,7 +1214,7 @@
                             <span class="tech-badge">Arabic UI</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://play.google.com/store/apps/details?id=com.brmja.tajweed" class="project-link" target="_blank">
+                            <a href="https://play.google.com/store/apps/details?id=com.eltagweed_elmoyasar" class="project-link" target="_blank">
                                 Play Store →
                             </a>
                         </div>
@@ -1088,7 +1223,7 @@
 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="https://play-lh.googleusercontent.com/Q0vYx0t7qZ7qZ7qZ7qZ7qZ7qZ7qZ7qZ7qZ7qZ7qZ7qZ7qZ7qZ7qZ7qZ7qZ7qZ7qZ7qZ7q=w240-h480-rw" alt="3aqar 3aen" style="object-fit: contain; background: #fff;">
+                        <img src="https://play-lh.googleusercontent.com/YkBfvdnA_TNWLVezFowHADF-p7p094uufDntQszBs5_qmSbj0XJLynoJGwFOp7Pn-cNt9Av0-ahOrO7APsQ-SA=w480-h960-rw" alt="3aqar 3aen" style="object-fit: contain; background: #fff;">
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">3aqar 3aen - عقار عين</h3>
@@ -1115,7 +1250,7 @@
 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="https://play-lh.googleusercontent.com/8X8X8X8X8X8X8X8X8X8X8X8X8X8X8X8X8X8X8X8X8X8X8X8X8X8X8X8X8X8X8X8X8X8X8X8X8X8X=w240-h480-rw" alt="Wensh Online" style="object-fit: contain; background: #fff;">
+                        <img src="https://play-lh.googleusercontent.com/ehwn7jIEmPsRHuYnLrUjqgz6Outh8Bvt4UVg4mLLMbEQIxqZcVTq4CUMgMuUUhoBVWAG6j_1hFyYOCHmhZ9q=w480-h960-rw" alt="Wensh Online" style="object-fit: contain; background: #fff;">
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">Wensh Online - ونش اونلاين</h3>
@@ -1130,10 +1265,10 @@
                             <span class="tech-badge">Real-time Tracking</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://play.google.com/store/apps/details?id=com.brmja.winsh_online" class="project-link" target="_blank">
+                            <a href="https://play.google.com/store/apps/details?id=tech.brmja.wench" class="project-link" target="_blank">
                                 Play Store →
                             </a>
-                            <a href="https://apps.apple.com/eg/app/%D9%88%D9%86%D8%B4-%D8%A7%D9%88%D9%86%D9%84%D8%A7%D9%8A%D9%86-app/id6738271685" class="project-link" target="_blank">
+                            <a href="https://apps.apple.com/eg/app/%D9%88%D9%86%D8%B4-%D8%A7%D9%88%D9%86%D9%84%D8%A7%D9%8A%D9%86/id6756924323" class="project-link" target="_blank">
                                 App Store →
                             </a>
                         </div>
@@ -1190,6 +1325,70 @@
                             <li>Improved app performance and responsiveness through optimization</li>
                         </ul>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="fade-in-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Academic Background</span>
+                <h2 class="section-title">Education</h2>
+                <p class="section-description">
+                    Strong academic foundation in Computer Science
+                </p>
+            </div>
+
+            <div class="education-card">
+                <div class="education-header">
+                    <div class="education-icon">🎓</div>
+                    <div class="education-info">
+                        <h3>BSc in Computer Science</h3>
+                        <div class="education-meta">Tanta University</div>
+                        <div class="education-date">August 2020 - June 2024</div>
+                    </div>
+                </div>
+                <div class="education-details">
+                    <div class="education-grade">Grade: 3.0 / 4.0</div>
+                    <p class="education-courses">
+                        <strong>Focused Coursework:</strong> Mobile App Development, Web Development, 
+                        Object-Oriented Programming (OOP), Data Structures, Algorithms, and SOLID Principles
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="fade-in-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Professional Development</span>
+                <h2 class="section-title">Certificates</h2>
+                <p class="section-description">
+                    Continuous learning and skill enhancement through specialized courses
+                </p>
+            </div>
+
+            <div class="certificates-grid">
+                <div class="certificate-card">
+                    <div class="certificate-icon">🏆</div>
+                    <h3>Flutter Advanced Course - Bloc and MVVM Pattern</h3>
+                    <div class="certificate-provider">Udemy</div>
+                </div>
+
+                <div class="certificate-card">
+                    <div class="certificate-icon">🏆</div>
+                    <h3>Deep Dive into Clean Architecture in Flutter</h3>
+                    <div class="certificate-provider">Udemy</div>
+                </div>
+
+                <div class="certificate-card">
+                    <div class="certificate-icon">🏆</div>
+                    <h3>Flutter App Creation: Google Maps Insertion Guide</h3>
+                    <div class="certificate-provider">Udemy</div>
                 </div>
             </div>
         </div>
